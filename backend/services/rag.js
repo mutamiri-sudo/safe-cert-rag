@@ -1,62 +1,58 @@
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 const { search } = require('./tfidfSearch');
 
-function formatAnswer(question, results) {
-  if (!results.length || results[0].score < 0.01) {
-    return {
-      answer:
-        "I couldn't find a strong match for that question in the SAFe 6.0 knowledge base. Try rephrasing or ask about a specific topic like PI Planning, WSJF, ART roles, or exam domains.",
-      sources: [],
-    };
-  }
+const SYSTEM_PROMPT = `You are a SAFe Practitioner 6.0 Certification Study Assistant. Your role is to help aspiring SAFe Practitioners prepare for and pass the SP 6.0 exam.
 
-  const topResult = results[0];
-  const supporting = results.slice(1).filter((r) => r.score > 0.03);
+INSTRUCTIONS:
+- Answer questions based ONLY on the provided context documents.
+- If the context doesn't contain enough information, say so honestly.
+- When relevant, mention which exam domain the topic falls under and its weighting.
+- Provide practical exam tips when appropriate (e.g., "This topic is worth 21-25% of the exam, so study it thoroughly").
+- Use clear, concise language. Format answers with bullet points or numbered lists when helpful.
+- If asked a practice question, create a realistic multiple-choice question with 4 options, reveal the correct answer, and explain WHY it's correct referencing SAFe concepts.
+- Always encourage the user and remind them that consistent study leads to success.
 
-  let answer = `**${topResult.title}**\n*(Exam Domain: ${topResult.domain})*\n\n${topResult.content}`;
+EXAM QUICK FACTS:
+- 45 questions, 90 minutes, 80% passing score (36/45 correct)
+- Closed book, web-based, multiple-choice single-select
+- 7 domains with varying weights (Plan the Work is heaviest at 21-25%)`;
 
-  if (supporting.length > 0) {
-    answer += '\n\n---\n\n**Related topics you should also study:**\n';
-    supporting.forEach((doc) => {
-      answer += `\n- **${doc.title}** *(${doc.domain})*: ${doc.content.substring(0, 150)}...`;
-    });
-  }
+async function askQuestion(question, chatHistory = []) {
+  const relevantDocs = search(question, 5);
 
-  // Add exam tip based on domain
-  const domainWeights = {
-    'Introducing SAFe': '6-12%',
-    'Forming Agile Teams as Trains': '15-21%',
-    'Connect to the Customer': '9-14%',
-    'Plan the Work': '21-25%',
-    'Deliver Value': '13-18%',
-    'Get Feedback': '6-12%',
-    'Improve Relentlessly': '13-18%',
-    'Exam Info': null,
-  };
+  const context = relevantDocs
+    .map(
+      (doc) =>
+        `[Domain: ${doc.domain}] ${doc.title}\n${doc.content}`
+    )
+    .join('\n\n---\n\n');
 
-  const weight = domainWeights[topResult.domain];
-  if (weight) {
-    answer += `\n\n**Exam Tip:** This topic falls under the *${topResult.domain}* domain, which accounts for **${weight}** of the exam.`;
-    if (weight === '21-25%') {
-      answer += ' This is the **highest-weighted domain** — study it thoroughly!';
-    } else if (weight === '15-21%' || weight === '13-18%') {
-      answer += ' This is a heavily-weighted domain — make sure you know it well.';
-    }
-  }
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  const model = genAI.getGenerativeModel({
+    model: 'gemini-flash-latest',
+    systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+  });
+
+  const chatMessages = chatHistory.slice(-10).map((m) => ({
+    role: m.role === 'assistant' ? 'model' : 'user',
+    parts: [{ text: m.content }],
+  }));
+
+  const chat = model.startChat({ history: chatMessages });
+
+  const prompt = `Context documents:\n\n${context}\n\n---\n\nUser question: ${question}`;
+  const result = await chat.sendMessage(prompt);
+  const response = result.response;
 
   return {
-    answer,
-    sources: results.map((doc) => ({
+    answer: response.text(),
+    sources: relevantDocs.map((doc) => ({
       id: doc.id,
       domain: doc.domain,
       title: doc.title,
       score: doc.score,
     })),
   };
-}
-
-async function askQuestion(question) {
-  const results = search(question, 5);
-  return formatAnswer(question, results);
 }
 
 module.exports = { askQuestion };

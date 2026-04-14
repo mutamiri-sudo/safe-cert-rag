@@ -3,3 +3,5 @@ node_modules
 frontend/build
 backend/data/embeddings.json
 .vercel
+
+.vercel

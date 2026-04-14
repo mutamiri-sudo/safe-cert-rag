@@ -1,3 +1,5 @@
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+
 const knowledge = require('../backend/data/safe-knowledge.json');
 
 const STOP_WORDS = new Set([
@@ -23,16 +25,13 @@ let cachedIndex = null;
 
 function buildIndex() {
   if (cachedIndex) return cachedIndex;
-
   const docTokens = knowledge.map((doc) =>
     tokenize(`${doc.domain} ${doc.title} ${doc.content}`)
   );
-
   const df = {};
   docTokens.forEach((tokens) => {
     new Set(tokens).forEach((t) => { df[t] = (df[t] || 0) + 1; });
   });
-
   const N = knowledge.length;
   const vectors = docTokens.map((tokens) => {
     const tf = {};
@@ -43,7 +42,6 @@ function buildIndex() {
     });
     return vector;
   });
-
   cachedIndex = { vectors, df, N };
   return cachedIndex;
 }
@@ -71,7 +69,6 @@ function search(query, topK = 5) {
   Object.entries(qtf).forEach(([term, count]) => {
     queryVector[term] = (count / queryTokens.length) * Math.log(N / (df[term] || 1));
   });
-
   const scored = knowledge.map((doc, i) => ({
     id: doc.id,
     domain: doc.domain,
@@ -79,67 +76,62 @@ function search(query, topK = 5) {
     content: doc.content,
     score: cosineSim(queryVector, vectors[i]),
   }));
-
   scored.sort((a, b) => b.score - a.score);
   return scored.slice(0, topK);
 }
 
-const domainWeights = {
-  'Introducing SAFe': '6-12%',
-  'Forming Agile Teams as Trains': '15-21%',
-  'Connect to the Customer': '9-14%',
-  'Plan the Work': '21-25%',
-  'Deliver Value': '13-18%',
-  'Get Feedback': '6-12%',
-  'Improve Relentlessly': '13-18%',
-};
+const SYSTEM_PROMPT = `You are a SAFe Practitioner 6.0 Certification Study Assistant. Your role is to help aspiring SAFe Practitioners prepare for and pass the SP 6.0 exam.
 
-module.exports = (req, res) => {
+INSTRUCTIONS:
+- Answer questions based ONLY on the provided context documents.
+- If the context doesn't contain enough information, say so honestly.
+- When relevant, mention which exam domain the topic falls under and its weighting.
+- Provide practical exam tips when appropriate.
+- Use clear, concise language. Format answers with bullet points or numbered lists when helpful.
+- If asked a practice question, create a realistic multiple-choice question with 4 options, reveal the correct answer, and explain WHY it's correct referencing SAFe concepts.
+
+EXAM QUICK FACTS:
+- 45 questions, 90 minutes, 80% passing score (36/45 correct)
+- Closed book, web-based, multiple-choice single-select
+- 7 domains with varying weights (Plan the Work is heaviest at 21-25%)`;
+
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { question } = req.body;
+    const { question, chatHistory } = req.body;
 
     if (!question || typeof question !== 'string' || !question.trim()) {
       return res.status(400).json({ error: 'Question is required' });
     }
 
-    const results = search(question.trim(), 5);
+    const relevantDocs = search(question.trim(), 5);
 
-    if (!results.length || results[0].score < 0.01) {
-      return res.json({
-        answer: "I couldn't find a strong match for that question. Try asking about PI Planning, WSJF, ART roles, Scrum, Kanban, or exam domains.",
-        sources: [],
-      });
-    }
+    const context = relevantDocs
+      .map((doc) => `[Domain: ${doc.domain}] ${doc.title}\n${doc.content}`)
+      .join('\n\n---\n\n');
 
-    const top = results[0];
-    const supporting = results.slice(1).filter((r) => r.score > 0.03);
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({
+      model: 'gemini-flash-latest',
+      systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+    });
 
-    let answer = `**${top.title}**\n*(Exam Domain: ${top.domain})*\n\n${top.content}`;
+    const chatMessages = (chatHistory || []).slice(-10).map((m) => ({
+      role: m.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: m.content }],
+    }));
 
-    if (supporting.length > 0) {
-      answer += '\n\n---\n\n**Related topics you should also study:**\n';
-      supporting.forEach((doc) => {
-        answer += `\n- **${doc.title}** *(${doc.domain})*: ${doc.content.substring(0, 150)}...`;
-      });
-    }
-
-    const weight = domainWeights[top.domain];
-    if (weight) {
-      answer += `\n\n**Exam Tip:** This topic falls under the *${top.domain}* domain, which accounts for **${weight}** of the exam.`;
-      if (weight === '21-25%') {
-        answer += ' This is the **highest-weighted domain** — study it thoroughly!';
-      } else if (weight === '15-21%' || weight === '13-18%') {
-        answer += ' This is a heavily-weighted domain — make sure you know it well.';
-      }
-    }
+    const chat = model.startChat({ history: chatMessages });
+    const prompt = `Context documents:\n\n${context}\n\n---\n\nUser question: ${question}`;
+    const result = await chat.sendMessage(prompt);
+    const response = result.response;
 
     res.json({
-      answer,
-      sources: results.map(({ content, ...rest }) => rest),
+      answer: response.text(),
+      sources: relevantDocs.map(({ content, ...rest }) => rest),
     });
   } catch (error) {
     console.error('Chat error:', error.message);

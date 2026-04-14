@@ -5,13 +5,13 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   try {
-    const { question } = req.body;
+    const { question, chatHistory } = req.body;
 
     if (!question || typeof question !== 'string' || !question.trim()) {
       return res.status(400).json({ error: 'Question is required' });
     }
 
-    const result = await askQuestion(question.trim());
+    const result = await askQuestion(question.trim(), chatHistory || []);
     res.json(result);
   } catch (error) {
     console.error('Chat error:', error.message);

@@ -1,0 +1,19 @@
+{
+  "name": "safe-cert-rag-backend",
+  "version": "1.0.0",
+  "description": "RAG-powered SAFe Practitioner 6.0 certification Q&A assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "embed": "echo 'No embedding step needed - using TF-IDF search'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

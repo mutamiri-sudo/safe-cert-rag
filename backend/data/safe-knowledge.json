@@ -1,0 +1,260 @@
+[
+  {
+    "id": "exam-overview",
+    "domain": "Exam Info",
+    "title": "SAFe Practitioner 6.0 Exam Overview",
+    "content": "The SAFe Practitioner (SP 6.0) certification exam consists of 45 multiple-choice, single-select questions. You have 90 minutes to complete the exam. The passing score is 80%, meaning you need to correctly answer at least 36 out of 45 questions. The exam is web-based, closed book, and no outside assistance is allowed. Exams auto-submit when the timer expires, and unanswered questions are marked as incorrect. You must review and accept the Candidate Agreement before starting."
+  },
+  {
+    "id": "exam-cost-retakes",
+    "domain": "Exam Info",
+    "title": "Exam Cost and Retake Policy",
+    "content": "The first two exam attempts are included with your course registration and must be taken within 30 days. Additional retakes cost $50 each. Retake timeline: First retake is available immediately after failure. Second retake requires a 10-day wait after the first retake. Third retake requires a 30-day wait after the second retake. All subsequent retakes require a 30-day waiting period."
+  },
+  {
+    "id": "exam-domains",
+    "domain": "Exam Info",
+    "title": "Exam Domain Weightings",
+    "content": "The SP 6.0 exam covers 7 domains: 1) Introducing SAFe (6-12%) - business agility, Lean-Agile mindset, core competencies, SAFe values and principles. 2) Forming Agile Teams as Trains (15-21%) - agile team characteristics, roles, Scrum, Kanban, ART characteristics and roles. 3) Connect to the Customer (9-14%) - customer-centric mindset, product vision and roadmap, story and feature components. 4) Plan the Work (21-25%) - writing and estimation, team backlog, team planning, PI Planning. This is the highest-weighted domain. 5) Deliver Value (13-18%) - continuous delivery pipeline, sync events, built-in quality. 6) Get Feedback (6-12%) - feedback techniques, team and system demos. 7) Improve Relentlessly (13-18%) - competency, flow, outcomes."
+  },
+  {
+    "id": "exam-strategy",
+    "domain": "Exam Info",
+    "title": "Exam Preparation Strategy",
+    "content": "Focus your study time based on domain weightings. Plan the Work (21-25%) is the most heavily weighted domain, so prioritize PI Planning, estimation, and backlog management. Forming Agile Teams as Trains (15-21%) and Deliver Value (13-18%) and Improve Relentlessly (13-18%) are also heavily weighted. The practice test mirrors the actual exam in format, difficulty, timing, and domain distribution. Take advantage of unlimited practice test attempts. Study the 7 lessons that correspond to each domain."
+  },
+  {
+    "id": "intro-business-agility",
+    "domain": "Introducing SAFe",
+    "title": "Business Agility",
+    "content": "Business Agility is the ability to compete and thrive in the digital age by quickly responding to market changes and emerging opportunities with innovative business solutions. It requires that everyone involved in delivering solutions — business and technology leaders, development, IT operations, legal, marketing, finance, support, compliance, security, and others — use Lean and Agile practices to continually deliver innovative, high-quality products and services faster than the competition."
+  },
+  {
+    "id": "intro-lean-agile-mindset",
+    "domain": "Introducing SAFe",
+    "title": "Lean-Agile Mindset",
+    "content": "The Lean-Agile Mindset is the combination of beliefs, assumptions, attitudes, and actions of SAFe leaders and practitioners who embrace the concepts of the Agile Manifesto and Lean thinking. It includes two key components: 1) SAFe embraces the values and principles from the Agile Manifesto. 2) SAFe incorporates Lean thinking from the Toyota Production System, including respect for people and culture, flow, innovation, and relentless improvement. Leaders must internalize and model these values to drive organizational change."
+  },
+  {
+    "id": "intro-core-values",
+    "domain": "Introducing SAFe",
+    "title": "SAFe Core Values",
+    "content": "SAFe has four core values that guide behavior and action: 1) Alignment - keeping everyone moving toward the same goals through PI Planning, strategic themes, and vision. 2) Built-in Quality - ensuring that every increment meets appropriate quality standards at every level. Quality is not negotiable. 3) Transparency - trust-building behavior based on making work visible, including backlogs, progress, impediments, and cross-team dependencies. 4) Program Execution - working programs are the primary measure of progress; SAFe emphasizes predictable, reliable delivery."
+  },
+  {
+    "id": "intro-safe-principles",
+    "domain": "Introducing SAFe",
+    "title": "SAFe Principles",
+    "content": "SAFe is built on 10 underlying principles derived from Agile, Lean, systems thinking, and product development flow: 1) Take an economic view. 2) Apply systems thinking. 3) Assume variability; preserve options. 4) Build incrementally with fast, integrated learning cycles. 5) Base milestones on objective evaluation of working systems. 6) Visualize and limit WIP, reduce batch sizes, and manage queue lengths. 7) Apply cadence, synchronize with cross-domain planning. 8) Unlock the intrinsic motivation of knowledge workers. 9) Decentralize decision-making. 10) Organize around value."
+  },
+  {
+    "id": "intro-core-competencies",
+    "domain": "Introducing SAFe",
+    "title": "Core Competencies: Agile Product Delivery and Team & Technical Agility",
+    "content": "Agile Product Delivery (APD) is a customer-centric approach to defining, building, and releasing a continuous flow of valuable products and services to customers and users. It includes customer centricity and design thinking, developing on cadence and releasing on demand, and the continuous delivery pipeline. Team and Technical Agility (TTA) describes the critical skills and Lean-Agile principles that high-performing Agile teams and Teams of Agile teams use to create high-quality solutions. Teams apply Agile practices (Scrum, Kanban, XP) and built-in quality practices."
+  },
+  {
+    "id": "teams-characteristics",
+    "domain": "Forming Agile Teams as Trains",
+    "title": "Agile Team Characteristics",
+    "content": "Agile teams in SAFe are cross-functional groups of 5-11 people who define, build, test, and deliver an increment of value in a short time box. Key characteristics: 1) Cross-functional - have all skills needed to deliver working increments. 2) Self-organizing - choose how to accomplish their work. 3) Self-managing - manage their own workload and processes. 4) Dedicated - team members are 100% dedicated to the team. 5) Co-located or distributed with effective collaboration tools. Teams apply either Scrum or Kanban as their Agile methodology."
+  },
+  {
+    "id": "teams-roles",
+    "domain": "Forming Agile Teams as Trains",
+    "title": "Agile Team Roles",
+    "content": "Each Agile team has three primary roles: 1) Scrum Master/Team Coach - servant leader who facilitates events, removes impediments, coaches the team on Agile practices, and helps improve flow. 2) Product Owner - responsible for maximizing the value delivered by the team, manages the team backlog, prioritizes work, and is the single voice of the customer for the team. 3) Developers/Team Members - cross-functional professionals who do the actual work of delivering increments. They self-organize to determine the best way to accomplish their goals. The Product Owner and Scrum Master are not 'above' the team; they are part of it."
+  },
+  {
+    "id": "teams-scrum",
+    "domain": "Forming Agile Teams as Trains",
+    "title": "Scrum Framework in SAFe",
+    "content": "Scrum is an Agile framework for developing and sustaining complex products. In SAFe, Scrum teams work in iterations (sprints), typically 2 weeks. Key Scrum events: 1) Sprint Planning - team selects stories from the backlog and plans the iteration. 2) Daily Stand-up (DSM) - 15-minute daily sync where team members share progress, plans, and impediments. 3) Sprint Review/Demo - team demonstrates completed work to stakeholders. 4) Sprint Retrospective - team inspects and adapts their process for continuous improvement. Scrum artifacts include the Product Backlog, Sprint Backlog, and Increment."
+  },
+  {
+    "id": "teams-kanban",
+    "domain": "Forming Agile Teams as Trains",
+    "title": "Kanban in SAFe",
+    "content": "Kanban is a method for managing knowledge work that emphasizes visualizing workflow, limiting work in progress (WIP), and improving flow. In SAFe, teams may use Kanban instead of Scrum, especially for maintenance, support, or operations work. Key Kanban practices: 1) Visualize the workflow on a Kanban board. 2) Limit WIP at each stage to prevent overloading. 3) Manage flow by measuring lead time, cycle time, and throughput. 4) Make process policies explicit. 5) Implement feedback loops. 6) Improve collaboratively, evolve experimentally. SAFe also uses a Team Kanban board to visualize the flow of features through the ART."
+  },
+  {
+    "id": "teams-art-characteristics",
+    "domain": "Forming Agile Teams as Trains",
+    "title": "Agile Release Train (ART) Characteristics",
+    "content": "The Agile Release Train (ART) is a long-lived team of Agile teams that, along with other stakeholders, incrementally develops, delivers, and often operates one or more solutions in a value stream. ART characteristics: 1) Typically 50-125 people organized into 5-12 Agile teams. 2) Aligned to a common mission via a single Program Backlog. 3) Plans, commits, and executes together during PI Planning. 4) Operates on a fixed PI (Program Increment) cadence, typically 8-12 weeks (usually 5 iterations with 1 Innovation & Planning iteration). 5) Delivers value incrementally through the continuous delivery pipeline."
+  },
+  {
+    "id": "teams-art-roles",
+    "domain": "Forming Agile Teams as Trains",
+    "title": "ART Roles",
+    "content": "Key ART-level roles include: 1) Release Train Engineer (RTE) - servant leader and chief Scrum Master for the ART. Facilitates PI Planning, manages risks, escalates impediments, and drives continuous improvement at the program level. 2) Product Management - responsible for defining and prioritizing the Program Backlog, understanding customer needs, and defining features and the program vision. 3) System Architect/Engineer - defines the overall architecture of the solution and provides technical guidance across teams. 4) Business Owners - key stakeholders who evaluate fitness for use and assign business value during PI Planning."
+  },
+  {
+    "id": "customer-mindset",
+    "domain": "Connect to the Customer",
+    "title": "Customer-Centric Mindset and Design Thinking",
+    "content": "A customer-centric mindset means the organization focuses on creating value for the customer, not just building features. Design Thinking is a key practice that helps teams: 1) Empathize - understand user needs through observation and engagement. 2) Define - clearly articulate the problem to solve. 3) Ideate - brainstorm potential solutions. 4) Prototype - build quick, low-fidelity models. 5) Test - validate solutions with real users. This human-centered approach ensures solutions address actual customer problems rather than assumed ones. Personas, empathy maps, and journey maps are common tools used."
+  },
+  {
+    "id": "customer-vision-roadmap",
+    "domain": "Connect to the Customer",
+    "title": "Product Vision and Roadmap",
+    "content": "The Product Vision describes the future state of the product or solution and guides the ART's direction. It should be inspiring, clear, and customer-focused. The Roadmap communicates the planned deliverables over a timeline, typically spanning several PIs. There are two types: 1) PI Roadmap - a near-term forecast of planned features for the next 2-3 PIs based on current context. 2) Solution Roadmap - longer-term view showing key milestones and deliverables. Roadmaps are living documents that evolve based on feedback and changing priorities. They should not be treated as fixed commitments."
+  },
+  {
+    "id": "customer-stories-features",
+    "domain": "Connect to the Customer",
+    "title": "Stories and Features",
+    "content": "Features are services provided by the system that fulfill stakeholder needs, typically described as a benefit hypothesis. Features are sized to be delivered within a single PI by a single ART. Features are split into user stories for team-level implementation. User Stories are short descriptions of a small piece of desired functionality, written from the user's perspective: 'As a [user], I want [goal], so that [benefit].' Stories should follow the INVEST criteria: Independent, Negotiable, Valuable, Estimable, Small, and Testable. Each story should have clear acceptance criteria that define 'done.'"
+  },
+  {
+    "id": "plan-estimation",
+    "domain": "Plan the Work",
+    "title": "Writing and Estimation",
+    "content": "Teams estimate work using relative sizing rather than absolute hours. Story Points are the most common unit, representing the relative effort, complexity, and uncertainty of a story. Common estimation techniques: 1) Planning Poker - team members independently select point values and discuss differences. 2) T-shirt sizing (S, M, L, XL) for quick relative sizing of features. 3) Fibonacci sequence (1, 2, 3, 5, 8, 13, 21) is commonly used for story point values, as the increasing gaps reflect growing uncertainty. Teams develop velocity over time - the average number of story points completed per iteration - which enables predictability."
+  },
+  {
+    "id": "plan-team-backlog",
+    "domain": "Plan the Work",
+    "title": "Team Backlog Management",
+    "content": "The Team Backlog contains user stories, defects, refactors, and other work items that a team needs to deliver. Key practices: 1) Backlog refinement (grooming) - ongoing activity where the team clarifies, estimates, and prioritizes upcoming stories. Typically done in dedicated sessions during each iteration. 2) The Product Owner is responsible for prioritizing the backlog using WSJF (Weighted Shortest Job First) or other methods. 3) Stories should be 'ready' before entering an iteration - meaning they are clearly defined, estimated, and have acceptance criteria. 4) The backlog should be visible to all team members and stakeholders."
+  },
+  {
+    "id": "plan-team-planning",
+    "domain": "Plan the Work",
+    "title": "Iteration (Sprint) Planning",
+    "content": "Iteration Planning (Sprint Planning) is a time-boxed event where the team determines what work can be accomplished in the upcoming iteration. Steps: 1) The Product Owner presents the highest-priority stories from the team backlog. 2) The team discusses each story, clarifies requirements, and identifies tasks. 3) The team determines their capacity based on availability and velocity. 4) The team commits to a set of stories they believe they can complete. 5) The team creates a plan for how they will deliver the committed stories. The output is the iteration backlog - the set of stories the team has committed to delivering."
+  },
+  {
+    "id": "plan-pi-planning",
+    "domain": "Plan the Work",
+    "title": "PI Planning",
+    "content": "PI Planning is the most critical event in SAFe. It is a face-to-face (or virtual), two-day event where all ART members plan together for the upcoming Program Increment (typically 8-12 weeks, 5 iterations). Agenda: Day 1 - Business context, product vision, architecture vision, and team breakout sessions for initial planning. Day 2 - Team breakout sessions continue, draft plan review, management review and problem-solving, confidence vote (fist of five), and plan rework. Key outputs: 1) Team PI Objectives with business value assigned by Business Owners. 2) Program Board showing features, dependencies, and milestones. 3) ROAM'd risks (Resolved, Owned, Accepted, Mitigated). PI Planning creates alignment, builds social connections, and establishes a shared commitment across all teams."
+  },
+  {
+    "id": "plan-pi-objectives",
+    "domain": "Plan the Work",
+    "title": "PI Objectives and Business Value",
+    "content": "PI Objectives are a summary of the business and technical goals that a team plans to achieve in the upcoming PI. They are written in business language so that all stakeholders can understand. Types: 1) Committed objectives - work the team is confident they can deliver. 2) Uncommitted objectives - work the team will attempt if they finish committed objectives early or if dependencies resolve favorably. Business Owners assign business value (1-10 scale) to each team's PI Objectives, ensuring the most valuable work is prioritized. Teams track their performance against objectives using the Predictability Measure - the percentage of objectives met versus planned."
+  },
+  {
+    "id": "plan-wsjf",
+    "domain": "Plan the Work",
+    "title": "WSJF (Weighted Shortest Job First)",
+    "content": "WSJF is a prioritization framework used in SAFe to sequence work for maximum economic benefit. The formula is: WSJF = Cost of Delay / Job Duration (or Size). Cost of Delay has three components: 1) User-Business Value - the relative value to the user or business. 2) Time Criticality - how much the value declines over time. 3) Risk Reduction/Opportunity Enablement - how much the feature reduces risk or enables future opportunities. Each component is rated on a relative scale (1, 2, 3, 5, 8, 13, 20). Jobs with the highest WSJF score should be done first. WSJF is used to prioritize the Program Backlog at the ART level."
+  },
+  {
+    "id": "deliver-cdp",
+    "domain": "Deliver Value",
+    "title": "Continuous Delivery Pipeline",
+    "content": "The Continuous Delivery Pipeline (CDP) is the workflow that enables continuous value delivery. It has four key aspects: 1) Continuous Exploration (CE) - exploring market and user needs, defining the vision, roadmap, and features. 2) Continuous Integration (CI) - the practice of frequently merging code changes into a shared repository, running automated builds and tests. 3) Continuous Deployment (CD) - the ability to release changes to production at any time through automation. 4) Release on Demand - the ability to release value to customers when it makes business sense. The pipeline enables the separation of 'deploy' from 'release' - code can be deployed to production without being visible to users (feature toggles, dark launches)."
+  },
+  {
+    "id": "deliver-sync-events",
+    "domain": "Deliver Value",
+    "title": "ART Sync Events",
+    "content": "ART sync events keep teams aligned during PI execution: 1) ART Sync (Scrum of Scrums) - a weekly event where team representatives share progress, discuss dependencies, and surface impediments. The RTE facilitates this. 2) PO Sync - Product Owners meet to discuss progress toward PI objectives, adjust scope, and resolve cross-team content issues. 3) System Demo - held at the end of every iteration, where the ART demonstrates the integrated increment to stakeholders. This is the most important feedback mechanism at the ART level. 4) Coach Sync - Scrum Masters meet to discuss team health, process improvements, and impediments."
+  },
+  {
+    "id": "deliver-built-in-quality",
+    "domain": "Deliver Value",
+    "title": "Built-in Quality Practices",
+    "content": "Built-in quality is a SAFe core value ensuring that every element and increment meets quality standards. Key practices: 1) Test-Driven Development (TDD) - write tests before code to ensure coverage. 2) Continuous Integration - merge and test code frequently to catch issues early. 3) Pair Programming / Code Review - collaborative practices that improve code quality. 4) Collective Ownership - any team member can modify any code, reducing bottlenecks. 5) Refactoring - continuously improving code structure without changing behavior. 6) Architectural Runway - intentional architecture work that enables future development without excessive redesign. Quality is non-negotiable in SAFe - you cannot 'trade' quality for speed; quality enables speed."
+  },
+  {
+    "id": "feedback-techniques",
+    "domain": "Get Feedback",
+    "title": "Feedback Techniques",
+    "content": "Getting fast feedback is essential in SAFe. Key feedback mechanisms: 1) Iteration Review/Team Demo - teams demonstrate working software to stakeholders every iteration for immediate feedback. 2) System Demo - the integrated solution is demonstrated at the end of each iteration to ART stakeholders. 3) Inspect & Adapt (I&A) - a significant event at the end of each PI where the ART reflects on performance, identifies improvement items, and plans improvements. 4) Customer feedback - gathered through surveys, interviews, analytics, A/B testing, and direct observation. 5) Metrics - including velocity, quality, flow metrics (lead time, cycle time, throughput), and Net Promoter Score (NPS)."
+  },
+  {
+    "id": "feedback-demos",
+    "domain": "Get Feedback",
+    "title": "Team Demo and System Demo",
+    "content": "The Team Demo occurs at the end of each iteration. The team demonstrates completed stories to the Product Owner and other stakeholders. It provides immediate feedback on whether the work meets acceptance criteria and user expectations. The System Demo is an ART-level event held every iteration (or more frequently) where the full integrated increment is demonstrated to stakeholders, including Business Owners. The System Demo is the most important measure of ART progress. It shows the current state of the solution and provides the objective evidence needed to make informed decisions. A successful PI System Demo at the end of the PI feeds into the Inspect & Adapt event."
+  },
+  {
+    "id": "improve-competency",
+    "domain": "Improve Relentlessly",
+    "title": "Continuous Improvement and Competency",
+    "content": "Relentless improvement is a cornerstone of SAFe, inspired by the Lean concept of Kaizen (continuous improvement). Teams and ARTs should constantly seek to improve their processes, tools, and practices. The Inspect & Adapt (I&A) event at the end of each PI is the primary mechanism for improvement at the ART level. I&A has three parts: 1) PI System Demo - demonstrating the full solution. 2) Quantitative and qualitative measurement - reviewing metrics, objectives, and outcomes. 3) Retrospective and problem-solving workshop - identifying the top improvement item and creating an improvement story that goes into the next PI's backlog."
+  },
+  {
+    "id": "improve-flow",
+    "domain": "Improve Relentlessly",
+    "title": "Improving Flow",
+    "content": "Improving flow is about reducing waste and delays to deliver value faster. Key flow concepts: 1) Visualize and limit WIP - too much WIP causes context switching and delays. 2) Reduce batch sizes - smaller batches flow through the system faster and provide faster feedback. 3) Manage queue lengths - long queues indicate bottlenecks. 4) Measure flow with metrics: Lead Time (request to delivery), Cycle Time (work start to delivery), Throughput (items completed per time period), and Flow Load (WIP). 5) Identify and address bottlenecks using the Theory of Constraints. SAFe Principle #6 directly addresses flow: 'Visualize and limit WIP, reduce batch sizes, and manage queue lengths.'"
+  },
+  {
+    "id": "improve-outcomes",
+    "domain": "Improve Relentlessly",
+    "title": "Measuring Outcomes",
+    "content": "SAFe emphasizes measuring outcomes over outputs. Key metrics: 1) Predictability Measure - how well teams deliver on their PI Objectives (target: 80-100%). 2) Flow metrics - lead time, cycle time, throughput, flow efficiency, and flow load measured at team and ART levels. 3) Quality metrics - defect trends, escaped defects, test coverage, and technical debt. 4) Business outcomes - customer satisfaction (NPS), market share, revenue impact. Teams use the Inspect & Adapt event to review these metrics and identify improvement actions. SAFe Principle #5 states: 'Base milestones on objective evaluation of working systems,' reinforcing the importance of measuring real outcomes."
+  },
+  {
+    "id": "pi-cadence",
+    "domain": "Plan the Work",
+    "title": "Program Increment Cadence and Structure",
+    "content": "A Program Increment (PI) is a timebox during which an ART delivers incremental value in the form of working, tested software and systems. Standard PI cadence: 8-12 weeks, typically consisting of 4 development iterations plus 1 Innovation and Planning (IP) iteration. The IP iteration serves several purposes: 1) Buffer for meeting PI objectives if teams fall behind. 2) Time for innovation and exploration (hackathons, spikes). 3) PI Planning for the next PI. 4) Inspect & Adapt event. 5) Continuing education and cross-training. Without the IP iteration, there is no time for planning, innovation, or continuous improvement, and the system becomes unsustainable."
+  },
+  {
+    "id": "program-board",
+    "domain": "Plan the Work",
+    "title": "Program Board and Dependencies",
+    "content": "The Program Board is a key artifact created during PI Planning. It is a physical or digital board that shows: 1) Features planned for each iteration by each team. 2) Feature dependencies between teams (shown as strings/lines connecting features). 3) Key milestones during the PI. The board provides a visual overview of the entire ART's plan and makes dependencies visible. Red strings indicate high-risk dependencies that need management attention. During PI execution, the program board is updated to reflect actual progress. Minimizing dependencies between teams is a goal, but when they exist, making them visible is critical."
+  },
+  {
+    "id": "roam-risks",
+    "domain": "Plan the Work",
+    "title": "ROAM Risk Management",
+    "content": "During PI Planning, teams identify risks that could impact their ability to deliver. These risks are categorized using the ROAM framework: 1) Resolved - the risk has been addressed and is no longer a concern. 2) Owned - someone has taken responsibility for the risk and is actively managing it. 3) Accepted - the risk is acknowledged and accepted; the impact is deemed manageable. 4) Mitigated - actions have been taken to reduce the probability or impact of the risk. The management review and problem-solving session during PI Planning Day 2 is where risks are ROAMed. Unresolved risks from PI Planning should be tracked throughout PI execution."
+  },
+  {
+    "id": "confidence-vote",
+    "domain": "Plan the Work",
+    "title": "Confidence Vote (Fist of Five)",
+    "content": "At the end of PI Planning, all team members participate in a confidence vote using the 'Fist of Five' technique. Each person holds up 1-5 fingers indicating their confidence that the team can meet its PI objectives: 5 = high confidence, 1 = no confidence. If the average is 3 or above, the plan is accepted. If below 3, the team must rework the plan. Anyone voting 1 or 2 is asked to share their concerns so they can be addressed. This is not just a formality - it creates genuine shared commitment and surfaces hidden concerns. The confidence vote ensures every voice is heard, not just the loudest."
+  },
+  {
+    "id": "innovation-planning-iteration",
+    "domain": "Plan the Work",
+    "title": "Innovation and Planning (IP) Iteration",
+    "content": "The Innovation and Planning (IP) iteration is the final iteration in each PI. It is dedicated to: 1) PI Planning for the next PI. 2) Inspect & Adapt event for the current PI. 3) Innovation time - teams explore new ideas, prototypes, and technical spikes. 4) Infrastructure and tooling improvements. 5) Cross-training and continuing education. 6) Buffer time to complete any remaining work from the PI. Management must protect this time from being consumed by regular work. Without the IP iteration, innovation stops, planning quality degrades, and the system becomes unsustainable. It is essential for long-term agility."
+  },
+  {
+    "id": "inspect-adapt",
+    "domain": "Improve Relentlessly",
+    "title": "Inspect and Adapt (I&A) Event",
+    "content": "Inspect & Adapt (I&A) is a significant event held at the end of each PI where the ART reflects on its performance and identifies improvements. The event has three parts: 1) PI System Demo - the ART demonstrates the full integrated solution to Business Owners and stakeholders. 2) Quantitative and Qualitative Measurement - teams review PI objectives, predictability measures, quality metrics, and other key indicators. 3) Problem-Solving Workshop - using root cause analysis (e.g., fishbone/Ishikawa diagrams), the ART identifies the biggest impediment and creates an improvement story. This improvement story is placed at the top of the next PI's program backlog to ensure it gets addressed."
+  },
+  {
+    "id": "agile-manifesto",
+    "domain": "Introducing SAFe",
+    "title": "Agile Manifesto and SAFe",
+    "content": "SAFe is grounded in the Agile Manifesto's four values: 1) Individuals and interactions over processes and tools. 2) Working software over comprehensive documentation. 3) Customer collaboration over contract negotiation. 4) Responding to change over following a plan. The 12 Agile principles also inform SAFe, including: delivering working software frequently, welcoming changing requirements, business and developers working together daily, building projects around motivated individuals, face-to-face conversation as the most efficient communication, and continuous attention to technical excellence. SAFe extends these individual team concepts to the enterprise level."
+  },
+  {
+    "id": "house-of-lean",
+    "domain": "Introducing SAFe",
+    "title": "SAFe House of Lean",
+    "content": "The SAFe House of Lean is inspired by the Toyota Production System's House of Lean. Its components: 1) Goal (Roof) - Value, the shortest sustainable lead time with best quality and value to people and society. 2) Pillar 1 - Respect for People and Culture. 3) Pillar 2 - Flow. 4) Pillar 3 - Innovation. 5) Pillar 4 - Relentless Improvement. 6) Foundation - Leadership. Lean-Agile Leaders drive the adoption and success of SAFe by modeling these values, leading by example, and creating an environment where Agile teams can thrive. Without leadership as the foundation, the Lean house cannot stand."
+  },
+  {
+    "id": "enabler-stories",
+    "domain": "Connect to the Customer",
+    "title": "Enablers and Enabler Stories",
+    "content": "Enablers are backlog items that support the activities needed to extend the Architectural Runway or provide technical infrastructure. Types of enablers: 1) Exploration enablers - research, prototypes, spikes to evaluate new technologies or approaches. 2) Architecture enablers - build the architectural runway to support future functionality. 3) Infrastructure enablers - build or improve development/deployment infrastructure. 4) Compliance enablers - address regulatory, legal, or compliance requirements. Enablers are written similarly to features and stories but focus on technical needs rather than direct user value. They still follow the same estimation and planning practices."
+  },
+  {
+    "id": "architectural-runway",
+    "domain": "Deliver Value",
+    "title": "Architectural Runway",
+    "content": "The Architectural Runway consists of the existing code, components, and technical infrastructure needed to implement near-term features without excessive redesign. It provides the technical foundation that supports current and future business functionality. Key points: 1) The System Architect is primarily responsible for maintaining the runway. 2) Runway is built incrementally through architecture enablers in the program backlog. 3) Without sufficient runway, feature development is slower and more risky. 4) Too much upfront architecture is wasteful - build just enough to support the next few PIs. It balances intentional architecture with emergent design, applying SAFe Principle #3: Assume variability; preserve options."
+  },
+  {
+    "id": "devops-culture",
+    "domain": "Deliver Value",
+    "title": "DevOps and the Continuous Delivery Pipeline",
+    "content": "DevOps is a mindset, culture, and set of technical practices that provides the capabilities to deliver value faster through continuous delivery. In SAFe, DevOps bridges the gap between development and operations. Key practices: 1) Automate everything - builds, tests, deployments, infrastructure. 2) Build quality in - shift testing left, automate testing. 3) Measure everything - monitor production, track flow metrics. 4) Recover rapidly - when things go wrong, detect and recover fast. The CALMR approach summarizes DevOps culture: Culture, Automation, Lean flow, Measurement, and Recovery. Together with the Continuous Delivery Pipeline, DevOps enables Release on Demand."
+  }
+]
